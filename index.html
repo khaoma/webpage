@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://www.gim-international.com/cache/f/8/6/c/4/f86c46ffd62559ac2d44952d887c38f995051516.jpeg");
+  
+  /* Add the blur effect */
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #474e5d;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  color: black;
+}
+.home-section {
+  padding: 50px;
+  text-align: center;
+  height:100%;
+  background-color: white;
+  color: black;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  height:100%;
+  background-color: white;
+  color: black;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 15%;
+   background-color: #333;
+   color: #fff;
+   text-align: center;
+   font-size: large;
+}
+
+#Home {background-color: white;}
+#About {background-color: white;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#555')">Home</button>
+<button class="tablink" onclick="openPage('About', this, '#555')">About</button>
+
+
+
+<div id="Home" class="tabcontent">
+  <div class="home-section"></div>
+  <div class="bg-image"></div>
+  <div class="bg-text">
+    <h2>Project Idea:Web application for analysis and decision support on missing persons</h2>
+  <p>This research project is aimed at using the GIS techniques to create a web-based GIS system 
+  that will allow querying, storage of spatial data from the spatial database. The system will be 
+  able to identify the hotspots for missing children, and apply the spatial autocorrelation and
+  neighbourhood functions and including optimal route analysis in identifying areas that are 
+  vulnerable to the cases of missing children, based on the initial cases  of abductions in Nairobi.</p>
+  </div>
+  </div>
+  </div>
+  
+  <div id="About" class="tabcontent">
+  <div class="about-section">
+  <div class="bg-image"></div>
+  <div class="bg-text">
+    <h1>About Us Page</h1>
+  <p style="padding-bottom: 10px;">Hello, welcome to my website.<br>
+    <p style="padding-top: 5px;">I am a student pursing an undergraduate degree in geomatic engineering and geospatial information systems</p>
+      <p>at Jomo Kenyatta University of Agriculture and Technology.
+        I  look forward to working with you.</p>
+  </div>
+</div>
+</div>
+
+
+<div class="footer">
+  &copy; 2023 khaoma. All rights reserved.
+    <a href="#"><i class="fa fa-fw fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-fw fa-github"></i></a>
+</div>
+
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
